@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_01_Neon.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Neon App" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Button Text="Conectar"  x:Name="btnConectar" Clicked="btnConectar_Clicked" ></Button>
+        <ScrollView Orientation="Both" HorizontalOptions="Fill" VerticalOptions="Fill" >
+        <Grid Margin="10,0,10,10" RowSpacing="5" ColumnSpacing="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                <ColumnDefinition Width="0.5*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                </Grid.RowDefinitions>
+            
+                <Label Text="Encendido" FontSize="20" Grid.ColumnSpan="2" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"></Label>
+                <Button Text="Normal" Grid.Row="1" Grid.Column="0" x:Name="btnEncendidoNormal" Clicked="btnEncendidoNormal_Clicked" ></Button>
+                <Button Text="Chido" Grid.Row="1" Grid.Column="1" x:Name="btnEncendidoChido" Clicked="btnEncendidoChido_Clicked"></Button>
+                <Button Text="Apagar" Grid.Row="2" Grid.ColumnSpan="2" x:Name="btnEncendidoApagar" Clicked="btnEncendidoApagar_Clicked"></Button>
+
+                <Label Text="Seguros" Grid.ColumnSpan="2" Grid.Row="3" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"></Label>
+                <Button Text="Poner" Grid.Row="4" Grid.Column="0" x:Name="btnSegurosPoner" Clicked="btnSegurosPoner_Clicked"></Button>
+                <Button Text="Quitar" Grid.Row="4" Grid.Column="1" x:Name="btnSegurosQuitar" Clicked="btnSegurosQuitar_Clicked"></Button>
+            
+                <Label Text="Otros" Grid.ColumnSpan="2" Grid.Row="5" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"></Label>
+                <Button Text="Cajuela" Grid.Row="6" Grid.ColumnSpan="2" x:Name="btnCajuela" Clicked="btnCajuela_Clicked"></Button>
+            </Grid>
+        </ScrollView>
+    </StackLayout>
+
+</ContentPage>
