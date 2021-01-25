@@ -1,0 +1,14 @@
+C:\Users\Richi\source\repos\01 Neon\01 Neon\bin\Release\netstandard2.0\01 Neon.deps.json
+C:\Users\Richi\source\repos\01 Neon\01 Neon\bin\Release\netstandard2.0\01 Neon.dll
+C:\Users\Richi\source\repos\01 Neon\01 Neon\bin\Release\netstandard2.0\ref\01 Neon.dll
+C:\Users\Richi\source\repos\01 Neon\01 Neon\bin\Release\netstandard2.0\01 Neon.pdb
+C:\Users\Richi\source\repos\01 Neon\01 Neon\obj\Release\netstandard2.0\01 Neon.csprojAssemblyReference.cache
+C:\Users\Richi\source\repos\01 Neon\01 Neon\obj\Release\netstandard2.0\App.xaml.g.cs
+C:\Users\Richi\source\repos\01 Neon\01 Neon\obj\Release\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Richi\source\repos\01 Neon\01 Neon\obj\Release\netstandard2.0\01 Neon.AssemblyInfoInputs.cache
+C:\Users\Richi\source\repos\01 Neon\01 Neon\obj\Release\netstandard2.0\01 Neon.AssemblyInfo.cs
+C:\Users\Richi\source\repos\01 Neon\01 Neon\obj\Release\netstandard2.0\01 Neon.csproj.CoreCompileInputs.cache
+C:\Users\Richi\source\repos\01 Neon\01 Neon\obj\Release\netstandard2.0\XamlC.stamp
+C:\Users\Richi\source\repos\01 Neon\01 Neon\obj\Release\netstandard2.0\01 Neon.dll
+C:\Users\Richi\source\repos\01 Neon\01 Neon\obj\Release\netstandard2.0\ref\01 Neon.dll
+C:\Users\Richi\source\repos\01 Neon\01 Neon\obj\Release\netstandard2.0\01 Neon.pdb

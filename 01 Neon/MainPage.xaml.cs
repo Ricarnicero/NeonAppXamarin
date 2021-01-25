@@ -18,25 +18,30 @@ namespace _01_Neon
         //await Task.Delay(300);
         private void btnEncendidoNormal_Clicked(object sender, System.EventArgs e)
         {
+            ble.ConnectToMyDevice();
             ble.Write("002");
         }
 
         private void btnEncendidoApagar_Clicked(object sender, System.EventArgs e)
         {
+            ble.ConnectToMyDevice();
             ble.Write("003");
         }
         private void btnEncendidoChido_Clicked(object sender, System.EventArgs e)
         {
+            ble.ConnectToMyDevice();
             ble.Write("004");
         }
 
         private void btnSegurosPoner_Clicked(object sender, System.EventArgs e)
         {
+            ble.ConnectToMyDevice();
             ble.Write("005");
         }
 
         private void btnSegurosQuitar_Clicked(object sender, System.EventArgs e)
         {
+            ble.ConnectToMyDevice();
             ble.Write("006");
         }
 
@@ -47,7 +52,32 @@ namespace _01_Neon
 
         private void btnCajuela_Clicked(object sender, System.EventArgs e)
         {
+            ble.ConnectToMyDevice();
             ble.Write("007");
+        }
+
+        private void btnSendInstruccion_Clicked(object sender, System.EventArgs e)
+        {
+            ble.ConnectToMyDevice();
+            ble.Write(txtInstruccion.Text);
+        }
+
+        private void btnActiveOn_Clicked(object sender, System.EventArgs e)
+        {
+            ble.ConnectToMyDevice();
+            ble.Write("031");
+        }
+
+        private void btnActiveOff_Clicked(object sender, System.EventArgs e)
+        {
+            ble.ConnectToMyDevice();
+            ble.Write("030");
+        }
+
+        private void btnApagarAccesorios_Clicked(object sender, System.EventArgs e)
+        {
+            ble.ConnectToMyDevice();
+            ble.Write("008");
         }
     }
 }

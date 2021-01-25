@@ -7,15 +7,18 @@
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
             <Label Text="Neon App" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
-        <Button Text="Conectar"  x:Name="btnConectar" Clicked="btnConectar_Clicked" ></Button>
         <ScrollView Orientation="Both" HorizontalOptions="Fill" VerticalOptions="Fill" >
-        <Grid Margin="10,0,10,10" RowSpacing="5" ColumnSpacing="5">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.5*"></ColumnDefinition>
-                <ColumnDefinition Width="0.5*"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="50"></RowDefinition>
+            <Grid Margin="10,0,10,10" RowSpacing="5" ColumnSpacing="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
                     <RowDefinition Height="50"></RowDefinition>
                     <RowDefinition Height="50"></RowDefinition>
                     <RowDefinition Height="50"></RowDefinition>
@@ -23,18 +26,27 @@
                     <RowDefinition Height="50"></RowDefinition>
                     <RowDefinition Height="50"></RowDefinition>
                 </Grid.RowDefinitions>
-            
-                <Label Text="Encendido" FontSize="20" Grid.ColumnSpan="2" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"></Label>
-                <Button Text="Normal" Grid.Row="1" Grid.Column="0" x:Name="btnEncendidoNormal" Clicked="btnEncendidoNormal_Clicked" ></Button>
-                <Button Text="Chido" Grid.Row="1" Grid.Column="1" x:Name="btnEncendidoChido" Clicked="btnEncendidoChido_Clicked"></Button>
-                <Button Text="Apagar" Grid.Row="2" Grid.ColumnSpan="2" x:Name="btnEncendidoApagar" Clicked="btnEncendidoApagar_Clicked"></Button>
 
-                <Label Text="Seguros" Grid.ColumnSpan="2" Grid.Row="3" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"></Label>
-                <Button Text="Poner" Grid.Row="4" Grid.Column="0" x:Name="btnSegurosPoner" Clicked="btnSegurosPoner_Clicked"></Button>
-                <Button Text="Quitar" Grid.Row="4" Grid.Column="1" x:Name="btnSegurosQuitar" Clicked="btnSegurosQuitar_Clicked"></Button>
-            
-                <Label Text="Otros" Grid.ColumnSpan="2" Grid.Row="5" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"></Label>
-                <Button Text="Cajuela" Grid.Row="6" Grid.ColumnSpan="2" x:Name="btnCajuela" Clicked="btnCajuela_Clicked"></Button>
+                <Label Text="Keep Active" FontSize="20" Grid.ColumnSpan="2" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"></Label>
+                <Button Text="On" Grid.Row="1" Grid.Column="0" x:Name="btnActiveOn" Clicked="btnActiveOn_Clicked"></Button>
+                <Button Text="Off" Grid.Row="1" Grid.Column="1" x:Name="btnActiveOff" Clicked="btnActiveOff_Clicked"></Button>
+                
+                <Label Text="Encendido" FontSize="20" Grid.ColumnSpan="2" Grid.Row="2" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"></Label>
+                <Button Text="Normal" Grid.Row="3" Grid.Column="0" x:Name="btnEncendidoNormal" Clicked="btnEncendidoNormal_Clicked" ></Button>
+                <Button Text="Chido" Grid.Row="3" Grid.Column="1" x:Name="btnEncendidoChido" Clicked="btnEncendidoChido_Clicked"></Button>
+                <Button Text="Apagar" Grid.Row="4" Grid.Column="0" x:Name="btnEncendidoApagar" Clicked="btnEncendidoApagar_Clicked"></Button>
+                <Button Text="Dejar accesorios" Grid.Row="4" Grid.Column="1" x:Name="btnApagarAccesorios" Clicked="btnApagarAccesorios_Clicked"></Button>
+
+                <Label Text="Seguros" Grid.ColumnSpan="2" Grid.Row="5" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"></Label>
+                <Button Text="Poner" Grid.Row="6" Grid.Column="0" x:Name="btnSegurosPoner" Clicked="btnSegurosPoner_Clicked"></Button>
+                <Button Text="Quitar" Grid.Row="6" Grid.Column="1" x:Name="btnSegurosQuitar" Clicked="btnSegurosQuitar_Clicked"></Button>
+
+                <Label Text="Otros" Grid.ColumnSpan="2" Grid.Row="7" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"></Label>
+                <Button Text="Cajuela" Grid.Row="8" Grid.ColumnSpan="2" x:Name="btnCajuela" Clicked="btnCajuela_Clicked"></Button>
+
+                <Label Text="Custom" FontSize="20" Grid.ColumnSpan="2" Grid.Row="9" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"></Label>
+                <Entry Grid.Row="10" Grid.Column="0" x:Name="txtInstruccion"></Entry>
+                <Button Text="Enviar" Grid.Row="10" Grid.Column="1" x:Name="btnSendInstruccion" Clicked="btnSendInstruccion_Clicked"></Button>
             </Grid>
         </ScrollView>
     </StackLayout>
