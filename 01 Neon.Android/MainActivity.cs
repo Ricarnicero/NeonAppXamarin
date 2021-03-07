@@ -23,7 +23,7 @@ namespace _01_Neon.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 
-            LocalNotificationsImplementation.NotificationIconId = Resource.Drawable.avd_hide_password;
+            LocalNotificationsImplementation.NotificationIconId = Resource.Drawable.iconNotification;
 
             LoadApplication(new App());
         }

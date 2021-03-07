@@ -2037,11 +2037,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Richi\\source\\repos\\Ricarnicero\\NeonAppXamarin\\01 Neon.Android\\01 Neon.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Richi\\Source\\Repos\\Ricarnicero\\NeonAppXamarin\\01 Neon.Android\\01 Neon.Android.csproj",
       "projectName": "01 Neon.Android",
-      "projectPath": "C:\\Users\\Richi\\source\\repos\\Ricarnicero\\NeonAppXamarin\\01 Neon.Android\\01 Neon.Android.csproj",
+      "projectPath": "C:\\Users\\Richi\\Source\\Repos\\Ricarnicero\\NeonAppXamarin\\01 Neon.Android\\01 Neon.Android.csproj",
       "packagesPath": "C:\\Users\\Richi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Richi\\source\\repos\\Ricarnicero\\NeonAppXamarin\\01 Neon.Android\\obj\\",
+      "outputPath": "C:\\Users\\Richi\\Source\\Repos\\Ricarnicero\\NeonAppXamarin\\01 Neon.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2062,8 +2062,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\Richi\\source\\repos\\Ricarnicero\\NeonAppXamarin\\01 Neon\\01 Neon.csproj": {
-              "projectPath": "C:\\Users\\Richi\\source\\repos\\Ricarnicero\\NeonAppXamarin\\01 Neon\\01 Neon.csproj"
+            "C:\\Users\\Richi\\Source\\Repos\\Ricarnicero\\NeonAppXamarin\\01 Neon\\01 Neon.csproj": {
+              "projectPath": "C:\\Users\\Richi\\Source\\Repos\\Ricarnicero\\NeonAppXamarin\\01 Neon\\01 Neon.csproj"
             }
           }
         }

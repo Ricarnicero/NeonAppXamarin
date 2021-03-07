@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Zat9PmyXx1Wniv2QgHV9f+GCZQcu3TKP59eQ1SerMWekU3RLF3ArdJtLMPp9x7fjpKNf4GZ1/XM9Bx1WIrJmfg==",
+  "dgSpecHash": "Mez5hgcwnMtFOJEI0IeL6D6cmk0PsY3L+am/soz13Bh9kP5bLIVZf2VtEN+XsMqzcDDaEmk2fesCOh2BpVnw7Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Richi\\source\\repos\\Ricarnicero\\NeonAppXamarin\\01 Neon.Android\\01 Neon.Android.csproj",
+  "projectFilePath": "C:\\Users\\Richi\\Source\\Repos\\Ricarnicero\\NeonAppXamarin\\01 Neon.Android\\01 Neon.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Richi\\.nuget\\packages\\plugin.ble\\2.1.1\\plugin.ble.2.1.1.nupkg.sha512",
     "C:\\Users\\Richi\\.nuget\\packages\\xam.plugins.notifier\\3.0.1\\xam.plugins.notifier.3.0.1.nupkg.sha512",

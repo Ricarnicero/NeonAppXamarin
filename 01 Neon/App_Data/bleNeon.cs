@@ -57,7 +57,6 @@ namespace _01_Neon.App_Data
                                 await adapter.ConnectToDeviceAsync(connectedDevice, new Plugin.BLE.Abstractions.ConnectParameters(autoConnect: true, forceBleTransport: true),cancellationToken: cancellationTokenSource.Token);
                                 break;
                             }
-
                         }
                     }
 

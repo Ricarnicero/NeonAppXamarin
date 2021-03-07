@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "k4jqkLqkvJQJPkgmv1FymYhEWNvZU7viEGKjJqVTQaFrSIMLTltB5wYeFkMUwSk98C6SOnPjUhKj0tQLQhmSJQ==",
+  "dgSpecHash": "JJuHghHWthQlRc2D++34uVQR7FGlmc9KF+9EaPOExaWIY5zN/UiAlQsGA7+Mniin0jSzWerYTcwfTARLc1uPQA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Richi\\source\\repos\\Ricarnicero\\NeonAppXamarin\\01 Neon\\01 Neon.csproj",
+  "projectFilePath": "C:\\Users\\Richi\\Source\\Repos\\Ricarnicero\\NeonAppXamarin\\01 Neon\\01 Neon.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Richi\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Richi\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

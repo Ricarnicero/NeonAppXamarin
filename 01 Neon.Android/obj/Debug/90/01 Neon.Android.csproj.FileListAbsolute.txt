@@ -908,3 +908,4 @@ C:\Users\Richi\Source\Repos\Ricarnicero\NeonAppXamarin\01 Neon.Android\obj\Debug
 C:\Users\Richi\Source\Repos\Ricarnicero\NeonAppXamarin\01 Neon.Android\obj\Debug\90\android\src\mono\android\support\v7\widget\ViewStubCompat_OnInflateListenerImplementor.java
 C:\Users\Richi\Source\Repos\Ricarnicero\NeonAppXamarin\01 Neon.Android\obj\Debug\90\android\src\xamarin\essentials\fileProvider.java
 C:\Users\Richi\Source\Repos\Ricarnicero\NeonAppXamarin\01 Neon.Android\obj\Debug\90\aapt_rules.txt
+C:\Users\Richi\Source\Repos\Ricarnicero\NeonAppXamarin\01 Neon.Android\obj\Debug\90\res\drawable\iconnotification.png
