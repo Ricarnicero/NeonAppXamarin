@@ -1,5 +1,6 @@
 FormsViewGroup
 Plugin.BLE
+Plugin.LocalNotifications
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Core.Runtime
 Xamarin.Android.Arch.Lifecycle.Common

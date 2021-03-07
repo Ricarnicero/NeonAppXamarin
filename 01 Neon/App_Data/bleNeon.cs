@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace _01_Neon.App_Data
 {
@@ -21,14 +22,14 @@ namespace _01_Neon.App_Data
             this.CharacteristcUID = new Guid(CharacteristcUID);
         }
 
-        public async void ConnectToMyDevice()
+        public async Task ConnectToMyDevice()
         {
+            InitConnectionAttempt(null, null);
             try
             {
                 var adapter = CrossBluetoothLE.Current.Adapter;
                 if (connectedDevice == null)
                 {
-
                     var devices = adapter.GetSystemConnectedOrPairedDevices();
                     foreach (IDevice device in devices)
                     {
@@ -37,33 +38,60 @@ namespace _01_Neon.App_Data
                             connectedDevice = device;
                             if (connectedDevice.State == Plugin.BLE.Abstractions.DeviceState.Disconnected)
                             {
-                                await adapter.ConnectToDeviceAsync(connectedDevice, new Plugin.BLE.Abstractions.ConnectParameters(autoConnect: true, forceBleTransport: true));
                                 adapter.DeviceDisconnected += (s, a) =>
                                 {
                                     connectedDevice = null;
+                                    OnDeviceDisconnect(s, a);
                                 };
+                                adapter.DeviceConnected += (s, a) =>
+                                {
+                                    OnDeviceConnect(s, a);
+                                };
+                                adapter.DeviceConnectionLost += (s, a) =>
+                                {
+                                    connectedDevice = null;
+                                    OnDeviceDisconnect(s, a);
+                                };
+                                var timeoutSeconds = 5;
+                                var cancellationTokenSource = new CancellationTokenSource(delay: TimeSpan.FromSeconds(timeoutSeconds));
+                                await adapter.ConnectToDeviceAsync(connectedDevice, new Plugin.BLE.Abstractions.ConnectParameters(autoConnect: true, forceBleTransport: true),cancellationToken: cancellationTokenSource.Token);
                                 break;
                             }
 
                         }
                     }
+
                 }
                 else if (connectedDevice.State == Plugin.BLE.Abstractions.DeviceState.Disconnected)
                 {
-                    await adapter.ConnectToDeviceAsync(connectedDevice, new Plugin.BLE.Abstractions.ConnectParameters(autoConnect: true, forceBleTransport: true));
+                    adapter.DeviceConnected += (s, a) =>
+                    {
+                        OnDeviceConnect(s, a);
+                    };
                     adapter.DeviceDisconnected += (s, a) =>
                     {
                         connectedDevice = null;
+                        OnDeviceDisconnect(s, a);
                     };
+                    adapter.DeviceConnectionLost += (s, a) =>
+                    {
+                        connectedDevice = null;
+                        OnDeviceDisconnect(s, a);
+                    };
+                    var timeoutSeconds = 5;
+                    var cancellationTokenSource = new CancellationTokenSource(delay: TimeSpan.FromSeconds(timeoutSeconds));
+                    await adapter.ConnectToDeviceAsync(connectedDevice, new Plugin.BLE.Abstractions.ConnectParameters(autoConnect: true, forceBleTransport: true), cancellationToken: cancellationTokenSource.Token);
+
                 }
             }
             catch (Exception ex)
             {
                 var e = ex.Message;
             }
+            FinishConnectionAttempt(null, null);
         }
 
-        public async void Write(string data)
+        public async Task Write(string data)
         {
             try
             {
@@ -91,26 +119,11 @@ namespace _01_Neon.App_Data
             }
         }
 
-        public async void Write(byte[] data)
-        {
-            try
-            {
-                var service = await connectedDevice.GetServiceAsync(ServiceUID);
-                var characteristic = await service.GetCharacteristicAsync(CharacteristcUID);
-                if (characteristic != null)
-                {
-                    if (characteristic.CanWrite)
-                    {
-                        await characteristic.WriteAsync(data);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine("-----------------------------------------------------");
-                Debug.WriteLine(ex.Message);
-            }
-        }
+
+        public event EventHandler OnDeviceConnect;
+        public event EventHandler OnDeviceDisconnect;
+        public event EventHandler InitConnectionAttempt;
+        public event EventHandler FinishConnectionAttempt;
     }
 }
 

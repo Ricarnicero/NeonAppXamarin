@@ -1,54 +1,72 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="_01_Neon.MainPage">
+             x:Class="_01_Neon.MainPage" BackgroundColor="#000000">
 
     <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Neon App" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        <Frame BackgroundColor="#2196F3" Padding="10" x:Name="pnlEstatus">
+            <Label Text="Neon App" TextColor="White" FontSize="32"/>
         </Frame>
-        <ScrollView Orientation="Both" HorizontalOptions="Fill" VerticalOptions="Fill" >
-            <Grid Margin="10,0,10,10" RowSpacing="5" ColumnSpacing="5">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
-                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
-                    <RowDefinition Height="50"></RowDefinition>
-                </Grid.RowDefinitions>
+        <StackLayout x:Name="pnlCarga" IsVisible="false" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="#000000">
+            <ActivityIndicator IsRunning="True" Color="#2fa8ed" IsVisible="true" HorizontalOptions="Center"></ActivityIndicator>
+            <Label Text="Conectando..."></Label>
+        </StackLayout>
+        <StackLayout x:Name="pnlActivarBL" IsVisible="false" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="#000000">
+            <Label Text="Bluetooth DESACTIVADO" VerticalOptions="Center" HorizontalOptions="Center" TextColor="#d90000" x:Name="lblStatusBL"></Label>
+        </StackLayout>
+        <StackLayout x:Name="pnlGeneral">
+            <Label LineBreakMode="WordWrap" FontSize="Medium">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Estatus: " TextColor="#f0f0f0" />
+                        <Span Text="Desconectado" TextColor="#d90000" FontAttributes="Bold" x:Name="statusDispositivo"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <BoxView HeightRequest="1" Color="#fff" IsVisible="true"/>
+            <ScrollView Orientation="Both" HorizontalOptions="Fill" VerticalOptions="Fill">
+                <Grid Margin="0,0,10,10" RowSpacing="5" ColumnSpacing="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                        <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition Height="35"></RowDefinition>
+                        <RowDefinition Height="35"></RowDefinition>
 
-                <Label Text="Keep Active" FontSize="20" Grid.ColumnSpan="2" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"></Label>
-                <Button Text="On" Grid.Row="1" Grid.Column="0" x:Name="btnActiveOn" Clicked="btnActiveOn_Clicked"></Button>
-                <Button Text="Off" Grid.Row="1" Grid.Column="1" x:Name="btnActiveOff" Clicked="btnActiveOff_Clicked"></Button>
-                
-                <Label Text="Encendido" FontSize="20" Grid.ColumnSpan="2" Grid.Row="2" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"></Label>
-                <Button Text="Normal" Grid.Row="3" Grid.Column="0" x:Name="btnEncendidoNormal" Clicked="btnEncendidoNormal_Clicked" ></Button>
-                <Button Text="Chido" Grid.Row="3" Grid.Column="1" x:Name="btnEncendidoChido" Clicked="btnEncendidoChido_Clicked"></Button>
-                <Button Text="Apagar" Grid.Row="4" Grid.Column="0" x:Name="btnEncendidoApagar" Clicked="btnEncendidoApagar_Clicked"></Button>
-                <Button Text="Dejar accesorios" Grid.Row="4" Grid.Column="1" x:Name="btnApagarAccesorios" Clicked="btnApagarAccesorios_Clicked"></Button>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition Height="35"></RowDefinition>
+                        <RowDefinition Height="35"></RowDefinition>
 
-                <Label Text="Seguros" Grid.ColumnSpan="2" Grid.Row="5" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"></Label>
-                <Button Text="Poner" Grid.Row="6" Grid.Column="0" x:Name="btnSegurosPoner" Clicked="btnSegurosPoner_Clicked"></Button>
-                <Button Text="Quitar" Grid.Row="6" Grid.Column="1" x:Name="btnSegurosQuitar" Clicked="btnSegurosQuitar_Clicked"></Button>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition Height="35"></RowDefinition>
+                        <RowDefinition Height="35"></RowDefinition>
 
-                <Label Text="Otros" Grid.ColumnSpan="2" Grid.Row="7" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"></Label>
-                <Button Text="Cajuela" Grid.Row="8" Grid.ColumnSpan="2" x:Name="btnCajuela" Clicked="btnCajuela_Clicked"></Button>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition Height="35"></RowDefinition>
+                        <RowDefinition Height="35"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Label Text="Encendido" FontSize="Title" TextColor="White" Grid.Row="0" Grid.ColumnSpan="2"></Label>
 
-                <Label Text="Custom" FontSize="20" Grid.ColumnSpan="2" Grid.Row="9" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"></Label>
-                <Entry Grid.Row="10" Grid.Column="0" x:Name="txtInstruccion"></Entry>
-                <Button Text="Enviar" Grid.Row="10" Grid.Column="1" x:Name="btnSendInstruccion" Clicked="btnSendInstruccion_Clicked"></Button>
-            </Grid>
-        </ScrollView>
+                    <Button x:Name="btnEncender" Text="Encender" Clicked="btnEncender_Clicked" BackgroundColor="#097a0e" TextColor="White" CornerRadius="5" Grid.Row="1" Grid.Column="0"></Button>
+                    <Button x:Name="btnApagar" Text="Apagar" Clicked="btnApagar_Clicked" BackgroundColor="#7a0909" TextColor="White" CornerRadius="5" Grid.Row="1" Grid.Column="1"></Button>
+                    <Button x:Name="btnAccesorios" Text="Accesorios" Clicked="btnAccesorios_Clicked" BorderWidth="1" BorderColor="SkyBlue" TextColor="White" CornerRadius="5" Grid.Row="2" Grid.ColumnSpan="2" BackgroundColor="#333333"></Button>
+
+                    <Label Text="Seguros" FontSize="Title" TextColor="White" Grid.Row="3" Grid.ColumnSpan="2" Padding="0,10,0,0"></Label>
+
+                    <Button x:Name="btnAbrirSeguros" Text="Abrir" Clicked="btnAbrirSeguros_Clicked" BorderWidth="1" BorderColor="DeepSkyBlue" TextColor="White" CornerRadius="5" Grid.Row="4" Grid.Column="0" BackgroundColor="#333333"></Button>
+                    <Button x:Name="btnCerrarSeguros" Text="Cerrar" Clicked="btnCerrarSeguros_Clicked" BorderWidth="1" BorderColor="DeepSkyBlue" TextColor="White" CornerRadius="5" Grid.Row="4" Grid.Column="1" BackgroundColor="#333333"></Button>
+                    <Button x:Name="btnAbrirCajuela" Text="Abrir cajuela" Clicked="btnAbrirCajuela_Clicked" BorderWidth="1" BorderColor="MediumBlue" TextColor="White" CornerRadius="5" Grid.Row="5" Grid.ColumnSpan="2" BackgroundColor="#333333"></Button>
+
+                    <Label Text="Luces" FontSize="Title" TextColor="White" Grid.Row="6" Grid.ColumnSpan="2" Padding="0,10,0,0"></Label>
+                    <Button x:Name="btnFaros" Text="Faros" Clicked="btnFaros_Clicked" BorderWidth="1" BorderColor="Purple" TextColor="White" CornerRadius="5" Grid.Row="7" Grid.Column="0" BackgroundColor="#333333"></Button>
+                    <Button x:Name="btnAltas" Text="Altas" Clicked="btnAltas_Clicked" BorderWidth="1" BorderColor="Purple" TextColor="White" CornerRadius="5" Grid.Row="7" Grid.Column="1" BackgroundColor="#333333"></Button>
+                    <Button x:Name="btnQuartoI" Text="Quarto I" Clicked="btnQuartoI_Clicked" BorderWidth="1" BorderColor="Purple" TextColor="White" CornerRadius="5" Grid.Row="8" Grid.Column="0" BackgroundColor="#333333"></Button>
+                    <Button x:Name="btnQuartoD" Text="Quarto D" Clicked="btnQuartoD_Clicked" BorderWidth="1" BorderColor="Purple" TextColor="White" CornerRadius="5" Grid.Row="8" Grid.Column="1" BackgroundColor="#333333"></Button>
+                </Grid>
+            </ScrollView>
+        </StackLayout>
     </StackLayout>
 
 </ContentPage>

@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "LGSW6yEFb/9etY4BbGCPH1OkLZVCj5lg5zJ/s4l2ih2jbvj884f53xXEYxpF4BzKJi7sgHwlFSJdyq4gQDnWXw==",
+  "dgSpecHash": "Zat9PmyXx1Wniv2QgHV9f+GCZQcu3TKP59eQ1SerMWekU3RLF3ArdJtLMPp9x7fjpKNf4GZ1/XM9Bx1WIrJmfg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Richi\\source\\repos\\01 Neon\\01 Neon.Android\\01 Neon.Android.csproj",
+  "projectFilePath": "C:\\Users\\Richi\\source\\repos\\Ricarnicero\\NeonAppXamarin\\01 Neon.Android\\01 Neon.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Richi\\.nuget\\packages\\plugin.ble\\2.1.1\\plugin.ble.2.1.1.nupkg.sha512",
+    "C:\\Users\\Richi\\.nuget\\packages\\xam.plugins.notifier\\3.0.1\\xam.plugins.notifier.3.0.1.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.common\\1.1.1.3\\xamarin.android.arch.core.common.1.1.1.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.runtime\\1.1.1.3\\xamarin.android.arch.core.runtime.1.1.1.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.lifecycle.common\\1.1.1.3\\xamarin.android.arch.lifecycle.common.1.1.1.3.nupkg.sha512",

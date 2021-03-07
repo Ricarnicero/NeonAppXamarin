@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Richi\\source\\repos\\01 Neon\\01 Neon\\01 Neon.csproj": {}
+    "C:\\Users\\Richi\\source\\repos\\Ricarnicero\\NeonAppXamarin\\01 Neon\\01 Neon.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Richi\\source\\repos\\01 Neon\\01 Neon\\01 Neon.csproj": {
+    "C:\\Users\\Richi\\source\\repos\\Ricarnicero\\NeonAppXamarin\\01 Neon\\01 Neon.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Richi\\source\\repos\\01 Neon\\01 Neon\\01 Neon.csproj",
+        "projectUniqueName": "C:\\Users\\Richi\\source\\repos\\Ricarnicero\\NeonAppXamarin\\01 Neon\\01 Neon.csproj",
         "projectName": "01 Neon",
-        "projectPath": "C:\\Users\\Richi\\source\\repos\\01 Neon\\01 Neon\\01 Neon.csproj",
+        "projectPath": "C:\\Users\\Richi\\source\\repos\\Ricarnicero\\NeonAppXamarin\\01 Neon\\01 Neon.csproj",
         "packagesPath": "C:\\Users\\Richi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Richi\\source\\repos\\01 Neon\\01 Neon\\obj\\",
+        "outputPath": "C:\\Users\\Richi\\source\\repos\\Ricarnicero\\NeonAppXamarin\\01 Neon\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -53,6 +53,10 @@
             "Plugin.BLE": {
               "target": "Package",
               "version": "[2.1.1, )"
+            },
+            "Xam.Plugins.Notifier": {
+              "target": "Package",
+              "version": "[3.0.1, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",
